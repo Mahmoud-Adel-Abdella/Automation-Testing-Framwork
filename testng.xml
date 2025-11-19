@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-        <listener class-name="utilities.TestListeners"/>
+        <listener class-name="Utilities.TestListeners"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/mahaa/IdeaProjects/Session_14">
         <classes>
-            <class name="TestCases.LoginTest">
+            <class name="Tests.LoginTest">
                 <methods>
                     <include name="loginTest"/>
                     <include name="loginTest2"/>

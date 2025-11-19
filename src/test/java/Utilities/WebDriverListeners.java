@@ -1,6 +1,5 @@
-package utilities;
+package Utilities;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverListener;

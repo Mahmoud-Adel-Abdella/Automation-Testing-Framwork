@@ -1,13 +1,12 @@
-package TestCases;
+package Tests;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
-import utilities.WebDriverListeners;
+import Utilities.WebDriverListeners;
 
 import java.time.Duration;
 

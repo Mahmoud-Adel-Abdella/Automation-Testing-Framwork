@@ -1,6 +1,6 @@
-package utilities;
+package Utilities;
 
-import TestCases.BaseTest;
+import Tests.BaseTest;
 import com.aventstack.extentreports.Status;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -8,7 +8,7 @@ import org.testng.ITestResult;
 
 import java.io.IOException;
 
-import static utilities.ExtentManger.screenShot;
+import static Utilities.ExtentManger.screenShot;
 
 public class TestListeners extends BaseTest implements ITestListener {
 

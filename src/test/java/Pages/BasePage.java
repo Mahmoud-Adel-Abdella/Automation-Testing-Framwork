@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,20 +16,31 @@ public class BasePage {
     //Globals
     protected WebDriver driver;
     protected WebDriverWait wait;
+    protected Actions actions;
 
     public BasePage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver , Duration.ofSeconds(10));
+        actions = new Actions(driver);
+//        PageFactory.initElements(driver, this);
     }
 
-    public void write(By locator , String item){
+    public void write(By locator , String text){
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         element.clear();
-        element.sendKeys(item);
+        element.sendKeys(text);
     }
 
-    public void myClick(By locator){
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    public String read(By locator){
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        return element.getText();
+    }
+
+    public void click(By locator){
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        actions.moveToElement(element).perform();
+        element.click();
     }
 
     public void radioRandomSelect(By locator){
@@ -51,5 +63,10 @@ public class BasePage {
         int randomIndex = random.nextInt(options.size());
 
         selects.selectByIndex(randomIndex);
+    }
+
+    public String getAttribute (By locator , String attribute){
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element.getAttribute(attribute);
     }
 }
