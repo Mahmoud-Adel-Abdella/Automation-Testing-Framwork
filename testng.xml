@@ -1,18 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <listeners>
-        <listener class-name="Utilities.TestListeners"/>
-    </listeners>
-    <test verbose="2" preserve-order="true" name="C:/Users/mahaa/IdeaProjects/Session_14">
-        <classes>
-            <class name="Tests.LoginTest">
-                <methods>
-                    <include name="loginTest"/>
-                    <include name="loginTest2"/>
-                    <include name="loginTest3"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/mahaa/IdeaProjects/Automation-Testing-Framwork"><classes><class name="Tests.HomeTest"><methods><include name="checkImgSrc"/></methods></class></classes></test></suite>
